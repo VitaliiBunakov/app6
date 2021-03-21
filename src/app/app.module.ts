@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AllUsersComponent } from './components/all-users/all-users.component';
 import { SingleUserComponent } from './components/single-user/single-user.component';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,11 @@ import { SingleUserComponent } from './components/single-user/single-user.compon
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    RouterModule.forRoot([
+      {
+        path : 'users', component : AllUsersComponent
+      }
+      ])
 
   ],
   providers: [],
