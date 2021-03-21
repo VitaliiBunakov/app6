@@ -7,7 +7,7 @@ import {UserService} from '../../services/user.service';
   templateUrl: './all-users.component.html',
   styleUrls: ['./all-users.component.css']
 })
-export class AllUsersComponent implements OnInit {
+export class AllUsersComponent  {
 
   @Input()
   users: Users[]  = [];
@@ -17,7 +17,6 @@ export class AllUsersComponent implements OnInit {
     this.userService.getAllUsers().subscribe(value => this.users = value );
   }
 
-  ngOnInit(): void {
-  }
+
 
 }
